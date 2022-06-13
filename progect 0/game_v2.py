@@ -15,7 +15,7 @@ def random_predict(number:int=1) -> int:
     """
         
     count = 0
-    min_number = 1 
+    min_number = 0 
     max_number = 100
 
     while True:
