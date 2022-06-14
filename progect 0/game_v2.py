@@ -5,7 +5,7 @@
 import numpy as np
 
 def random_predict(number:int=1) -> int:
-    """Угадываем число используя дихотомию с предварительным разделением диапазона
+    """Угадываем число используя метод дихотомии
 
     Args:
         number (int, optional): Загаданное число. Defaults to 1.
@@ -15,12 +15,12 @@ def random_predict(number:int=1) -> int:
     """
         
     count = 0
-    min_number = 0 
+    min_number = 0  # задаем диапазон поиска
     max_number = 100
     
     while True:
-        count += 1
-        predit_number = round((min_number+max_number)/2) # предполагаемое число
+        count += 1 
+        predit_number = round((min_number+max_number)/2) # вычисляем заданное число с округлением до целого
             
         if predit_number > number:
             max_number = predit_number
@@ -28,7 +28,7 @@ def random_predict(number:int=1) -> int:
             min_number = predit_number
         else:
             break # выход из цикла, если угадали
-    return(count)
+    return(count) # возвращаем число попыток затраченное на поиск
 
 print(f'Количество попыток: {random_predict()}')
 
