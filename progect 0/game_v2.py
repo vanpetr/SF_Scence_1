@@ -16,22 +16,8 @@ def random_predict(number:int=1) -> int:
         
     count = 0
     min_number = 0 
-    medium_number1 = 25 # задаем отрезки для ускорения поиска
-    medium_number2 = 50
-    medium_number3 = 75
     max_number = 100
-    if number <= medium_number1:
-            max_number =  medium_number1
-    elif number <= medium_number2:
-            max_number = medium_number2
-            min_number = medium_number1
-    elif number <= medium_number3:
-            max_number = medium_number3
-            min_number = medium_number2 
-    else:
-         max_number = 100
-         min_number = medium_number3  
-
+    
     while True:
         count += 1
         predit_number = round((min_number+max_number)/2) # предполагаемое число
