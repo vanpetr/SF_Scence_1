@@ -19,3 +19,5 @@ print(nd_array)
 print(nd_array[1:, 2:4]) # срез всех строк со второй по столбцам с 3го по 4й
 print(nd_array[:, 2:4]) # всех строк по столбцам 3 и 4
 print(nd_array[:2]) # срез всех строк до 3й строки целиком
+print(nd_array)
+print(nd_array[::-1, -1])
